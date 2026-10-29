@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Ihsan</title><meta name="theme-color" content="#2a0711">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script defer src="config.js"></script><script defer src="content.js"></script><script defer src="script.js"></script>
+</head><body class="lock">
+<div id="hearts" aria-hidden="true"></div>
+<div id="intro" role="dialog" aria-modal="true" aria-labelledby="introT">
+  <div class="intro-box">
+    <h2 id="introT">For <span id="introName">Ihsan</span></h2>
+    <div class="env" id="env" aria-hidden="true"><span class="paper">💌</span></div>
+    <button id="openBtn" class="btn" type="button">Open Your Little World of Love ❤️</button>
+    <button id="skipBtn" class="link" type="button">Skip</button>
+  </div>
+</div>
+<main id="main" tabindex="-1">
+<header class="hero">
+  <h1 id="heroTitle">A Little World Made Just for You, Ihsan ❤️</h1>
+  <p id="introP" class="lead"></p>
+  <div class="duo" aria-hidden="true"><span class="orb a"></span><span class="thread"></span><span class="orb b"></span></div>
+  <nav class="nav" aria-label="Sections"><a href="#letter-s">Letter</a><a href="#reasons-s">Reasons</a><a href="#memory-s">Memories</a><a href="#openwhen-s">Open when</a><a href="#daily-s">Today</a><a href="#dreams-s">Dreams</a><a href="#sweet-s">Questions</a><a href="#kind-s">Kindness</a><a href="#form-s">Your answers</a></nav>
+</header>
+<section class="rv"><p id="msg" class="serif big"></p></section>
+<section id="letter-s" class="rv"><h2>A letter for you</h2>
+  <button id="letterBtn" class="btn" type="button" aria-expanded="false" aria-controls="letter">Open the letter 💌</button>
+  <article id="letter" class="letter"><p id="letterText"></p><button id="revealAll" class="link" type="button" hidden>Show all text</button><p id="sig" class="sig"></p></article></section>
+<section id="reasons-s" class="rv"><h2>Reasons you are special to me</h2><p class="hint">Tap a card.</p><div id="reasons" class="grid"></div></section>
+<section id="memory-s" class="rv"><h2>Our memory lane</h2><p id="memEmpty" class="hint"></p><ol id="timeline" class="timeline"></ol></section>
+<section id="openwhen-s" class="rv"><h2>Open when…</h2><div id="openwhen" class="grid"></div></section>
+<section id="daily-s" class="rv"><h2>For today</h2>
+  <p id="dailyText" class="serif big" aria-live="polite"></p>
+  <div class="row"><button id="dailyBtn" class="btn ghost" type="button">Another one</button><button id="surpriseBtn" class="btn" type="button">A little surprise 🎁</button></div>
+  <p id="surpriseText" class="serif big" aria-live="polite"></p><div id="burst" aria-hidden="true"></div></section>
+<section id="dreams-s" class="rv"><h2>Our dreams</h2><div id="dreams" class="grid"></div></section>
+<section id="sweet-s" class="rv"><h2>Sweet questions</h2><p class="hint">Just for talking about together. You can skip any of them.</p>
+  <p id="qText" class="serif big" aria-live="polite"></p><p id="qCount" class="hint"></p>
+  <div class="row"><button id="qBack" class="btn ghost" type="button">Back</button><button id="qSkip" class="btn ghost" type="button">Skip</button><button id="qNext" class="btn" type="button">Next</button></div></section>
+<section id="kind-s" class="rv"><h2>Kindness corner</h2><div id="kind" class="grid"></div></section>
+<section id="form-s" class="rv"><h2>Tell me what's on your heart</h2>
+  <p class="hint">Everything here is optional. Your answers are sent to Abdullahi's private dashboard, and nowhere else. Please don't share passwords or financial details.</p>
+  <form id="loveForm" novalidate>
+    <label for="nickname">Name you like to be called</label><input id="nickname" maxlength="60" autocomplete="nickname">
+    <label for="favorite_part">Favorite part of this website</label><input id="favorite_part" maxlength="200">
+    <label for="message">A message you want Abdullahi to read</label><textarea id="message" rows="4" maxlength="1500"></textarea>
+    <label for="dream_destination">A dream destination</label><input id="dream_destination" maxlength="120">
+    <label for="favorites">Favorite colors or flowers</label><input id="favorites" maxlength="200">
+    <label for="future_hopes">Your hopes for the future</label><textarea id="future_hopes" rows="3" maxlength="1000"></textarea>
+    <fieldset><legend>Do you feel comfortable talking about marriage in the future?</legend>
+      <p class="hint">Every answer is welcome. There is no wrong answer and no pressure.</p>
+      <label class="opt"><input type="radio" name="marriage" value="Skipped" checked> Skip this question</label>
+      <label class="opt"><input type="radio" name="marriage" value="Yes, in shaa Allah"> Yes, in shaa Allah</label>
+      <label class="opt"><input type="radio" name="marriage" value="I would like more time to think"> I would like more time to think</label>
+      <label class="opt"><input type="radio" name="marriage" value="I am not ready to answer this"> I am not ready to answer this</label>
+      <label class="opt"><input type="radio" name="marriage" value="No"> No</label></fieldset>
+    <label for="note">Anything else</label><textarea id="note" rows="3" maxlength="1000"></textarea>
+    <button id="sendBtn" class="btn" type="submit">Send my answers ❤️</button>
+    <p id="status" role="status" aria-live="polite"></p>
+  </form></section>
+<footer id="footer" class="foot"></footer>
+</main></body></html>

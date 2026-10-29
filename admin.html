@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Admin</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="admin.css">
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script><script defer src="config.js"></script><script defer src="admin.js"></script></head>
+<body><main class="adm">
+<section id="loginPanel"><h1>Private dashboard</h1>
+<form id="loginForm"><label for="email">Email</label><input id="email" type="email" autocomplete="username" required>
+<label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required>
+<button class="btn" type="submit">Sign in</button><p id="loginMsg" role="status" aria-live="polite"></p></form></section>
+<section id="dash" hidden><h1>Answers</h1>
+<div class="row"><input id="q" type="search" placeholder="Search answers" aria-label="Search answers"><select id="f" aria-label="Filter by marriage answer"><option value="">All answers</option></select>
+<button id="refresh" class="btn ghost" type="button">Refresh</button><button id="out" class="btn ghost" type="button">Sign out</button></div>
+<p id="count" class="hint" role="status"></p><div id="list"></div></section>
+<dialog id="dlg" aria-labelledby="dT"><h2 id="dT">Response</h2><div id="dBody"></div><div class="row"><button id="del" class="btn" type="button">Delete</button><button id="close" class="btn ghost" type="button">Close</button></div><p id="dMsg" role="status"></p></dialog>
+</main></body></html>
